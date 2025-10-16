@@ -336,12 +336,21 @@ void aes_sm3_integrity_256bit(const uint8_t* input, uint8_t* output) {
     uint8_t compressed[128];
     
 #if defined(__ARM_FEATURE_CRYPTO) && defined(__aarch64__)
-    // NEON极限优化：处理16个256字节块
-    // 每个256字节块压缩到8字节
-    for (int i = 0; i < 16; i++) {
-        const uint8_t* block = input + i * 256;
-        uint8_t* out = compressed + i * 8;
-        
+   // NEON极限优化：处理16个256字节块
+// 每个256字节块压缩到8字节
+for (int i = 0; i < 16; i++) {
+    const uint8_t* block = input + i * 256;
+    uint8x16_t accumulated = vdupq_n_u8(0);
+
+    for (int j = 0; j < 16; j++) {
+        uint8x16_t chunk = vld1q_u8(block + j * 16);
+        accumulated = veorq_u8(accumulated, chunk);
+    }
+    
+    // Post-process with further transformations or lightweight hash
+    vst1_u8(compressed + i * 8, vget_low_u8(accumulated));
+}
+
         // 加载16个16字节块并XOR折叠
         uint8x16_t b0  = vld1q_u8(block + 0);
         uint8x16_t b1  = vld1q_u8(block + 16);
@@ -1052,4 +1061,5 @@ int main() {
     
     return 0;
 }
+
 
