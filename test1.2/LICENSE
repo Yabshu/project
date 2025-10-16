@@ -1,0 +1,73 @@
+MIT License
+
+Copyright (c) 2025 AES-SM3 Integrity Algorithm Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 第三方组件声明
+
+本项目实现参考了以下标准和规范：
+
+1. **AES (Advanced Encryption Standard)**
+   - 标准: FIPS 197
+   - 版权: 公共领域
+
+2. **SM3密码杂凑算法**
+   - 标准: GM/T 0004-2012
+   - 版权: 国家密码管理局
+
+3. **SHA-256算法**
+   - 标准: FIPS 180-4
+   - 版权: 公共领域
+
+本软件的实现完全独立，不包含任何受版权保护的第三方代码。
+
+---
+
+## 使用限制
+
+1. **密码学合规性**: 在某些国家和地区使用加密算法可能受到法律限制，
+   使用者应确保遵守当地法律法规。
+
+2. **出口管制**: 某些密码学软件可能受到出口管制，请在跨境使用前
+   咨询相关法律意见。
+
+3. **国密合规**: 在中国境内使用涉及国家秘密的信息系统时，应遵守
+   《商用密码管理条例》等相关法规。
+
+---
+
+## 免责声明
+
+本软件仅供研究和教育目的使用。在生产环境中使用前，应进行充分的
+安全审计和测试。作者不对因使用本软件造成的任何损失承担责任。
+
+对于关键任务应用，建议：
+- 由专业密码学专家进行安全审计
+- 实施完整的密钥管理策略
+- 进行充分的渗透测试
+- 遵循最佳安全实践
+
+---
+
+版本: 1.1.0
+日期: 2025-10-13
+
